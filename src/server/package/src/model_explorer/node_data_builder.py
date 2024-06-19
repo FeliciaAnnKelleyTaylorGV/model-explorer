@@ -38,7 +38,7 @@ class ModelNodeData:
     """Writes the data into the given file."""
     abs_path = os.path.abspath(os.path.expanduser(path))
     with open(abs_path, 'w') as f:
-      data = self.to_json_string(indent=indent)
+      data = self.to_json_string(NodeData=Constant)
       f.write(data)
 
   def to_json_string(self, indent: Union[int, None] = None) -> str:
